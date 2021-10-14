@@ -1,0 +1,42 @@
+body {
+    background-color: lavender;
+    display: grid;
+    grid-template-areas:
+    "header header"
+    "movie-selection movie-selection"
+    "display-info display-info"
+    "form form"
+    "list list";
+}
+
+#header {
+    width: 75%;
+    background-color: skyblue;
+    grid-area: header;
+    display: grid;
+    grid-template-areas: 
+    "logo h1";
+}
+
+#header img {
+    height: 170px;
+    grid-area: logo;
+}
+
+#header h1 {
+    grid-area: h1;
+}
+
+#movie-selection {
+    grid-area: movie-selection;
+}
+#display-info {
+    grid-area: display-info;
+}
+
+#form {
+    grid-area: form;
+}
+#list {
+    grid-area: list;
+}
