@@ -16,9 +16,7 @@ fetch("https://ghibliapi.herokuapp.com/films")
                   if(e.target.value.toLowerCase()===el.title.toLowerCase()){
                     section.innerHTML=`
                     <h3>${el.title}</h3>
-                    <br>
                     <p>${el.release_date}</p>
-                    <br>
                     <p>${el.description}</p>`;
                     break;
 
@@ -29,12 +27,14 @@ fetch("https://ghibliapi.herokuapp.com/films")
 
             form.addEventListener("submit", e=>{
                 e.preventDefault();
-                let yourReview=document.querySelector("#form-review").value;
+                let yourReview=e.target.review.value;
+                e.target.review.value="";
                 let li=document.createElement("li");
                 let title=document.querySelector("#display-info h3").textContent;
-                li.innerHTML=`<strong>${title}</strong>: ${yourReview}`;
+                li.innerHTML=
+                `<strong>${title}: ${yourReview}</strong>`;
                 ul.append(li);
-                e.target.review.value="";
+                
             })
 
                 
