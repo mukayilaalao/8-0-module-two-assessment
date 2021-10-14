@@ -1,6 +1,7 @@
 let form=document.querySelector("#form");
 let select=document.querySelector("#movie-selection");
 let section=document.querySelector("#display-info");
+let ul=document.querySelector("#list");
 fetch("https://ghibliapi.herokuapp.com/films")
    .then(data=> data.json())
       .then(obj=> {
@@ -19,13 +20,25 @@ fetch("https://ghibliapi.herokuapp.com/films")
                     <p>${el.release_date}</p>
                     <br>
                     <p>${el.description}</p>`;
+                    break;
 
                   }
-                //   break;
+                //   
               }
+            })
+
+            form.addEventListener("submit", e=>{
+                e.preventDefault();
+                let yourReview=document.querySelector("#form-review").value;
+                let li=document.createElement("li");
+                let title=document.querySelector("#display-info h3").textContent;
+                li.innerHTML=`<strong>${title}</strong>: ${yourReview}`;
+                ul.append(li);
+                e.target.review.value="";
+            })
 
                 
         
-        })
-      });
+        
+});
 
