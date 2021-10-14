@@ -21,7 +21,7 @@ fetch("https://ghibliapi.herokuapp.com/films")
                     break;
 
                   }
-                //   
+                 
               }
             })
 
@@ -30,6 +30,7 @@ fetch("https://ghibliapi.herokuapp.com/films")
                 let yourReview=e.target.review.value;
                 e.target.review.value="";
                 let li=document.createElement("li");
+                let strong=document.createElement("strong");
                 let title=document.querySelector("#display-info h3").textContent;
                 li.innerHTML=
                 `<strong>${title}: ${yourReview}</strong>`;

@@ -9,13 +9,14 @@ body {
     "display-info display-info"
     "form form"
     "list list";
-    justify-content: center;
-    align-items: center;
+    
 }
 
 #header {
     width: 75%;
     background-color: skyblue;
+    margin-left: auto;
+    margin-right: auto;
     grid-area: header;
     display: grid;
     grid-template-areas: 
@@ -35,16 +36,39 @@ body {
 #movie-selection {
     grid-area: movie-selection;
     margin-bottom: 30px;
+    margin-left: 200px;
+    margin-right: auto;
+    width: 50%;
 }
 #display-info {
     grid-area: display-info;
     margin-bottom: 20px;
+    margin-left: 200px;
+    margin-right: auto;
+    width: 50%;
+    
 }
 
 #form {
     grid-area: form;
     margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+}
+
+#form-submit {
+    background-color: gray;
+    border-radius:5px;
 }
 #list {
     grid-area: list;
+    margin-left: 160px;
+    margin-right: auto;
+    width: 70%;
 }
+
+#list li {
+    margin-bottom: 20px;
+}
+
