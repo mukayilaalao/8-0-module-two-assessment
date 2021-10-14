@@ -1,12 +1,16 @@
 body {
+    margin: 0;
     background-color: lavender;
+    font-family: monospace;
     display: grid;
     grid-template-areas:
     "header header"
-    "movie-selection movie-selection"
+    "movie-selection ."
     "display-info display-info"
     "form form"
     "list list";
+    justify-content: center;
+    align-items: center;
 }
 
 #header {
@@ -16,6 +20,7 @@ body {
     display: grid;
     grid-template-areas: 
     "logo h1";
+    margin-bottom: 20px;
 }
 
 #header img {
@@ -29,13 +34,16 @@ body {
 
 #movie-selection {
     grid-area: movie-selection;
+    margin-bottom: 30px;
 }
 #display-info {
     grid-area: display-info;
+    margin-bottom: 20px;
 }
 
 #form {
     grid-area: form;
+    margin-bottom: 20px;
 }
 #list {
     grid-area: list;
